@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" ?>
+
+<casaxml xmlns="http://casa.nrao.edu/schema/psetTypes.html"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://casa.nrao.edu/schema/casa.xsd
+file:///opt/casa/code/xmlcasa/xml/casa.xsd">
+
+<task type="function" name="gmrtpb" category="imaging">
+
+  <shortdescription>This task produces an image of the GMRT primary beam corresponding to the frequency and geometry of the input image.</shortdescription>
+      
+  <description>This task is useful if you want to apply primary beam correction to a GMRT image. The task for primary beam correction in CASA is 'impbcor'. It needs an image of the primary beam as input. This task produces an image of the GMRT primary beam corresponding to the frequency and geometry of the input image that is suitable in the argument 'pbimage' of the task impbcor.</description>
+
+  <input>
+
+    <param type="string" name="imagein" mustexist="true">
+      <description>Input image name</description>
+      <value></value>
+    </param>
+
+    <param type="string" name="imageout">
+      <description>Output image name</description>
+      <value></value>
+    </param>
+
+  <constraints>
+  </constraints>
+
+  </input>
+
+  <returns type="void"/>
+
+  <example>
+
+   This task produces an image of the GMRT primary beam corresponding 
+   to the frequency and geometry of the input image.
+
+   Keyword arguments:
+
+	imagein -- name of input image file
+        imageout -- name of output image file
+
+  </example>
+
+</task>
+
+</casaxml>
+
