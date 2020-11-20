@@ -1,5 +1,6 @@
 # GMRTpbcor
 A recipe for GMRT primary beam correction in CASA. This works in CASA 4.7. 
+The task may not work in other more recent versions of CASA.
 
 How to use the task 'gmrtpb':
  - Keep the task_gmrtpb.py and gmrtpb.xml files in the same directory.
