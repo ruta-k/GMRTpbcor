@@ -1,5 +1,5 @@
 # GMRTpbcor
-A recipe for GMRT primary beam correction in CASA. This works in CASA 4.7. 
+A recipe for GMRT primary beam correction in CASA. This works in CASA 4.7 (casa-release-4.7.2-el7). 
 The task may not work in other more recent versions of CASA.
 
 How to use the task 'gmrtpb':
