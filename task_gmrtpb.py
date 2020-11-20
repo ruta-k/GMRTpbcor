@@ -80,23 +80,28 @@ def gmrtpb(imagein=None,imageout=None):
 		rad2arcsec = ((180.0/math.pi)*3600.0)
 		print 'cellsize in arcsec =', d_ra*rad2arcsec, d_dec*rad2arcsec
 # Beam parameters (from Nimisha's webpage/gmrt_pb.py)
+# Updated in Nov 2020 using the GMRT User's Manual 
 # Freq range is approximate
 		if 0.2< nu < 0.28:
-			hpbw = 118.5 #arcminutes
+			hpbw = 114.0 #arcminutes
 			a, b, c, d = -3.366, 46.159, -29.963, 7.529
 			print 'using pbparms for', nu, 'GHz', a, b, c, d  
 		elif 0.3< nu<0.35:
-			hpbw = 85.2 #arcminutes
+			hpbw = 81.0 #arcminutes
 			a, b, c, d = -3.397, 47.192, -30.931, 7.803
 			print 'using pbparms for', nu, 'GHz', a, b, c, d   
 		elif 0.55<nu<0.65:
-			hpbw = 44.4 #arcminutes
+			hpbw = 43.0 #arcminutes
 			a, b, c, d = -3.486, 47.749, -35.203, 10.399
 			print 'using pbparms for', nu, 'GHz', a, b, c, d   
 		elif 1.1<nu<1.4:
 			hpbw = 26.2 # arcminutes
 			a, b, c, d = -2.27961, 21.4611, -9.7929, 1.80153
-			print 'using pbparms for', nu, 'GHz', a, b, c, d   
+			print 'using pbparms for', nu, 'GHz', a, b, c, d
+		elif 0.12< nu<0.18:
+			hpbw = 186.0 #arcminutes
+			a, b, c, d = -4.04, 76.2, -68.8, 22.03
+			print 'using pbparms for', nu, 'GHz', a, b, c, d 			
 		else:
 			print 'No GMRT primary beam shape available'  
 # Copy the input image to the output image name
